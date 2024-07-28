@@ -9,11 +9,10 @@ let authorDataArr = [];
 
 //to make a get request to the url
 fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
-    .then((res) => {
-        console.log(res.json());
-    })
+    .then((res) => res.json())  
     .then((data) => {
         authorDataArr = data;
+        console.log(authorDataArr);
         displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
     })
     .catch((err) => {
