@@ -33,4 +33,11 @@ const displayAuthors = (authors) => {
     });
 }
 
+//function to fetch more author's data
+const fetchMoreAuthors = () => {
+    startingIndex += 8;
+    endingIndex += 8;
+    displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
+}
+
 
